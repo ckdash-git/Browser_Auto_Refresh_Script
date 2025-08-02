@@ -1,0 +1,32 @@
+{
+  "manifest_version": 3,
+  "name": "Naukri Profile Activity Booster",
+  "version": "1.0",
+  "description": "Automatically maintains activity on your Naukri profile by performing periodic edit and save actions.",
+  "permissions": [
+    "activeTab",
+    "storage",
+    "alarms"
+  ],
+  "host_permissions": [
+    "https://*.naukri.com/*"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://*.naukri.com/*"],
+      "js": ["content.js"]
+    }
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Naukri Activity Booster"
+  },
+  "icons": {
+    "16": "icon16.svg",
+    "48": "icon48.svg",
+    "128": "icon128.svg"
+  }
+}
