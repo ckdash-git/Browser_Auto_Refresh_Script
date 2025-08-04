@@ -1,160 +1,342 @@
-# Auto Web Page Refresher 🔄
+# Naukri Automation Suite 🚀
 
-A Python script that automatically refreshes any web page at specified intervals using Selenium WebDriver. Perfect for monitoring dashboards, live feeds, or any web content that needs regular updates.
+A comprehensive collection of automation tools for Naukri.com profile activity and job applications.
 
-## Features ✨
+## 📋 Available Tools
 
-- 🌐 Works with any website
-- ⏰ Customizable refresh intervals (default: 5 minutes)
-- 🖥️ Real-time status updates and refresh counter
-- 🛡️ Error handling and automatic retry
-- 🚀 Easy to use interactive interface
-- 🔧 Automatic ChromeDriver management
+### 1. Profile Activity Scripts
+Keep your Naukri profile active and visible to recruiters:
 
-## Prerequisites 📋
+- **`naukri_auto_activity.py`** - Reliable profile activity automation
+- **`naukri_session_activity.py`** - Uses existing Chrome session
+- **`naukri_stealth_activity.py`** - Advanced stealth features
 
-- Python 3.7 or higher
-- Google Chrome browser installed
-- Internet connection
+### 2. Job Application Scripts
+Automatically search and apply for iOS developer positions:
 
-## Installation 🚀
+- **`naukri_job_apply_advanced.py`** - 🆕 Advanced form-filling with intelligent automation
+- **`naukri_job_auto_apply.py`** - Full-featured job application automation
+- **`naukri_job_apply_simple.py`** - Simplified version for quick setup
 
-1. **Clone or download the files** to your desired directory
+### 3. Browser Extension
+Manual control extension for profile activity:
 
-2. **Install required dependencies:**
-   ```bash
-   pip install -r requirements.txt
-   ```
+- **`browser_extension/`** - Chrome extension for manual profile updates
 
-   Or install manually:
-   ```bash
-   pip install selenium webdriver-manager
-   ```
+### 4. Diagnostic Tools
+- **`test_webdriver.py`** - Test WebDriver setup and diagnose issues
 
-## Usage 💻
+## 📁 Files Overview
 
-1. **Run the script:**
-   ```bash
-   python auto_refresh.py
-   ```
+### 1. `naukri_job_apply_advanced.py` - 🆕 Advanced Form-Filling Script
+The most comprehensive job application tool with intelligent form filling:
 
-2. **Enter the website URL** when prompted:
-   ```
-   Enter the URL to refresh: https://example.com
-   ```
-   
-   Note: You can enter URLs with or without `https://` - the script will add it automatically.
+- **Automatic Form Filling**: Fills application forms with your personal details
+- **Dynamic Experience Calculation**: Calculates experience from your start date (March 11, 2024)
+- **Dual Application Support**: Handles both "Apply" and "Apply on Company website" buttons
+- **Recent Jobs Priority**: Focuses on recently posted positions
+- **Smart Field Detection**: Automatically detects and fills salary, location, notice period fields
+- **External Site Handling**: Can fill forms on company websites too
 
-3. **Set refresh interval** (optional):
-   ```
-   Enter refresh interval in minutes (default: 5): 3
-   ```
-   
-   - Press Enter to use default (5 minutes)
-   - Enter any positive number for custom interval
+### 2. `naukri_job_auto_apply.py` - Main Application Script
+The comprehensive job application automation tool with advanced features:
 
-4. **Monitor the refreshing:**
-   - The script will open Chrome and navigate to your specified URL
-   - It will refresh the page automatically at your specified interval
-   - Real-time status updates will be shown in the terminal
+- **Smart Job Filtering**: Automatically filters iOS-related positions
+- **Human-like Behavior**: Random delays and natural browsing patterns
+- **Safety Features**: Application limits and confirmation prompts
+- **Detailed Logging**: Real-time progress updates and session summaries
+- **Error Handling**: Robust error recovery and graceful failures
 
-5. **Stop the script:**
-   - Press `Ctrl+C` in the terminal to stop auto-refreshing
-   - The browser will close automatically
+### 3. `naukri_job_apply_simple.py` - Lightweight Version
+A streamlined version for quick job applications:
 
-## Example Output 📊
+- **Fast Execution**: Minimal delays for quick results
+- **Simple Interface**: Easy to use with basic configuration
+- **Essential Features**: Core functionality without advanced options
 
+### 4. `test_webdriver.py` - Diagnostic Tool
+Troubleshooting utility to verify your setup:
+
+- **Browser Testing**: Verifies Chrome/ChromeDriver installation
+- **Naukri Access**: Tests website connectivity
+- **Setup Validation**: Confirms all dependencies are working
+
+## 🎯 Job Auto-Application Features
+
+### 🆕 Advanced Form Filling (naukri_job_apply_advanced.py)
+✅ **Personal Details Auto-Fill**: Automatically fills your information:
+- Experience: Dynamically calculated from March 11, 2024 (currently 1 year 5 months)
+- Current Location: Bangalore
+- Current Company: CACHATTO India Pvt Limited
+- Current Salary: ₹240,000
+- Expected Salary: ₹450,000
+- Notice Period: 30 days
+- Willing to Relocate: Yes
+
+✅ **Dual Application Support**: Handles both "Apply" and "Apply on Company website" buttons
+
+✅ **External Site Forms**: Can fill forms on company websites too
+
+✅ **Recent Jobs Priority**: Focuses on recently posted positions
+
+### What It Does
+✅ **Searches for iOS-related positions:**
+- iOS Developer
+- iOS Engineer
+- SDE-iOS
+- Software Engineer iOS
+- Mobile Developer iOS
+- iOS Swift Developer
+- Senior iOS Developer
+
+✅ **Smart filtering:**
+- Filters out non-iOS positions (Android, Backend, etc.)
+- Checks job relevance using keywords
+- Avoids duplicate applications
+
+✅ **Automated application process:**
+- Finds and clicks apply buttons
+- Handles application popups
+- Tracks application history
+- Provides detailed reports
+
+✅ **Human-like behavior:**
+- Random delays between actions
+- Scrolling and natural interactions
+- Stealth browser settings
+
+## 🚀 Quick Start - Job Auto-Application
+
+### Option 1: Advanced Form-Filling Script (🆕 Recommended)
+```bash
+# Install additional dependency for date calculations
+pip3 install -r requirements_advanced.txt
+
+# Run the advanced script with form filling
+python3 naukri_job_apply_advanced.py
 ```
-============================================================
-🌐 Auto Web Page Refresher
-============================================================
 
-Enter the URL to refresh: github.com
-Enter refresh interval in minutes (default: 5): 2
-
-✓ Chrome WebDriver initialized successfully
-Loading page: https://github.com
-✓ Page loaded successfully at 2024-01-15 14:30:00
-
-🔄 Auto-refresh started!
-📍 URL: https://github.com
-⏰ Refresh interval: 120 seconds (2 minutes)
-
-Press Ctrl+C to stop the auto-refresh
-
-✓ Page refreshed at 2024-01-15 14:32:00
-📊 Total refreshes: 1
-✓ Page refreshed at 2024-01-15 14:34:00
-📊 Total refreshes: 2
-
-🛑 Auto-refresh stopped by user
-📊 Total refreshes performed: 2
-✓ Browser closed successfully
+### Option 2: Full-Featured Version
+```bash
+python3 naukri_job_auto_apply.py
 ```
 
-## Use Cases 🎯
+### Option 3: Simple Version (For beginners)
+```bash
+python3 naukri_job_apply_simple.py
+```
 
-- **Dashboard Monitoring:** Keep live dashboards updated
-- **Social Media Feeds:** Monitor real-time social media updates
-- **News Websites:** Stay updated with breaking news
-- **Stock Prices:** Monitor financial markets
-- **Server Status Pages:** Keep track of system status
-- **Live Sports Scores:** Follow game updates
-- **Auction Sites:** Monitor bidding activity
+### Option 4: Test Setup First
+```bash
+python3 test_webdriver.py
+```
 
-## Troubleshooting 🔧
+## 📖 Step-by-Step Guide
 
-### Common Issues:
+### Prerequisites
+1. **Install dependencies:**
+   ```bash
+   pip3 install selenium webdriver-manager
+   ```
 
-1. **"ChromeDriver not found" error:**
-   - The script automatically downloads ChromeDriver
-   - Ensure you have a stable internet connection
-   - Make sure Chrome browser is installed
+2. **Update your Naukri profile:**
+   - Complete all profile sections
+   - Upload latest resume
+   - Add relevant skills and experience
 
-2. **"Permission denied" error:**
-   - Run the terminal as administrator (Windows) or use `sudo` (Mac/Linux)
-   - Check if antivirus is blocking the script
+3. **Have Chrome browser installed**
 
-3. **Page won't load:**
-   - Check your internet connection
-   - Verify the URL is correct and accessible
-   - Some websites may block automated access
+### Running the Job Auto-Application
 
-4. **Script stops unexpectedly:**
-   - Check the terminal for error messages
-   - Ensure Chrome browser isn't manually closed
-   - Restart the script if needed
+1. **Start the script:**
+   ```bash
+   python3 naukri_job_apply_simple.py
+   ```
 
-### Performance Tips:
+2. **Configure settings:**
+   - Enter number of jobs to apply to (default: 5)
+   - Confirm to start automation
 
-- **For long-running sessions:** Consider using longer refresh intervals to reduce resource usage
-- **Multiple pages:** Run separate instances of the script for different URLs
-- **Background running:** The script keeps the browser window open - minimize it to save screen space
+3. **Manual login:**
+   - Browser will open to Naukri.com
+   - Log in to your account manually
+   - Return to terminal and press Enter
 
-## Customization 🛠️
+4. **Automation begins:**
+   - Script searches for iOS developer jobs
+   - Automatically applies to relevant positions
+   - Shows progress in terminal
 
-You can modify the script to:
-- Add headless mode (browser runs in background)
-- Support multiple URLs simultaneously
-- Add email notifications on page changes
-- Log refresh activities to a file
-- Add specific element monitoring instead of full page refresh
+5. **Review results:**
+   - Check application summary
+   - Monitor email for confirmations
+   - Review applications in Naukri dashboard
 
-## Security Notes 🔒
+## ⚙️ Configuration Options
 
-- The script only refreshes pages and doesn't collect or store any data
-- It uses official Selenium WebDriver - no malicious code
-- ChromeDriver is downloaded from official Google sources
-- Always verify URLs before running to avoid malicious websites
+### Simple Version Settings
+- **Max Applications:** Number of jobs to apply to per session
+- **Manual Login:** Ensures account security
+- **Real-time Progress:** See applications as they happen
 
-## License 📄
+### Full Version Settings
+- **Location Preferences:** Filter by city/region
+- **Experience Level:** Match your experience
+- **Application History:** Tracks all applications
+- **Advanced Filtering:** More precise job matching
 
-This project is open source and available under the MIT License.
+## 📊 What to Expect
 
-## Support 💬
+### Terminal Output
+```
+🎯 Naukri iOS Job Auto-Apply (Simple Version)
+==================================================
+🚀 Setting up browser...
+✅ Browser ready!
 
-If you encounter any issues or have suggestions for improvements, feel free to create an issue or contribute to the project!
+🔐 Please log in to Naukri.com
+⏳ Press Enter after you've logged in...
+✅ Proceeding with job search...
+
+🔍 Searching for iOS developer jobs...
+✅ Search page loaded
+
+🎯 Looking for jobs to apply (max: 5)...
+📋 Found 15 job listings
+
+📝 Processing job 1/5...
+   📌 Job: iOS Developer - Swift
+   ✅ Applied successfully! (1/5)
+
+📝 Processing job 2/5...
+   📌 Job: Senior iOS Engineer
+   ✅ Applied successfully! (2/5)
+
+==================================================
+📊 APPLICATION SUMMARY
+==================================================
+🔍 Jobs Found: 15
+✅ Applications Sent: 5
+==================================================
+🎉 Applications submitted successfully!
+📧 Check your email for confirmations.
+💼 Monitor your Naukri dashboard for responses.
+```
+
+### Browser Behavior
+- Opens Chrome browser
+- Navigates to Naukri job search
+- Scrolls through job listings
+- Clicks apply buttons automatically
+- Handles application forms and popups
+
+## 🛡️ Safety Features
+
+### Built-in Protections
+- **Rate Limiting:** Delays between applications
+- **Duplicate Prevention:** Tracks applied jobs
+- **Manual Login:** Keeps your credentials secure
+- **Error Handling:** Graceful failure recovery
+- **User Control:** Easy to stop anytime (Ctrl+C)
+
+### Best Practices
+- **Start Small:** Begin with 3-5 applications
+- **Review Profile:** Ensure it's complete and updated
+- **Monitor Results:** Check email and dashboard
+- **Use Responsibly:** Don't spam applications
+- **Regular Updates:** Keep scripts updated
+
+## 🔧 Troubleshooting
+
+### Common Issues
+
+**Browser doesn't open:**
+```bash
+# Test WebDriver setup
+python3 test_webdriver.py
+
+# Update Chrome browser
+# Restart computer
+```
+
+**No jobs found:**
+- Check if logged in properly
+- Try different search terms
+- Verify internet connection
+
+**Applications not working:**
+- Ensure profile is complete
+- Check for Naukri site changes
+- Try manual application first
+
+**Script hangs:**
+- Press Ctrl+C to stop
+- Check internet connection
+- Restart and try again
+
+## 📈 Success Tips
+
+### Maximize Application Success
+1. **Profile Optimization:**
+   - Complete all sections
+   - Use relevant keywords
+   - Upload recent photo
+   - Add portfolio links
+
+2. **Resume Quality:**
+   - Highlight iOS experience
+   - Include Swift/Objective-C skills
+   - Mention published apps
+   - Add relevant certifications
+
+3. **Strategic Application:**
+   - Apply during business hours
+   - Target companies in your preferred location
+   - Follow up on applications
+   - Customize applications when possible
+
+## 🆚 Comparison: Simple vs Full Version
+
+| Feature | Simple Version | Full Version |
+|---------|----------------|---------------|
+| Setup Difficulty | Easy | Moderate |
+| Job Search | Basic iOS search | Multiple keywords |
+| Filtering | Basic relevance | Advanced filtering |
+| History Tracking | Session only | Persistent storage |
+| Location Filter | No | Yes |
+| Experience Filter | No | Yes |
+| Application Limit | Per session | Configurable |
+| Error Recovery | Basic | Advanced |
+| Reporting | Simple summary | Detailed analytics |
+
+## 📞 Support
+
+If you encounter issues:
+1. Run the diagnostic script: `python3 test_webdriver.py`
+2. Check the troubleshooting section above
+3. Ensure all dependencies are installed
+4. Verify Chrome browser is updated
+
+## ⚖️ Legal & Ethical Use
+
+- Use responsibly and ethically
+- Respect Naukri.com's terms of service
+- Don't spam applications
+- Review applications manually
+- Keep your profile and resume updated
+- Use for legitimate job searching only
+
+## 🎉 Success Stories
+
+This automation suite helps you:
+- **Save Time:** Apply to multiple jobs quickly
+- **Stay Consistent:** Regular profile activity
+- **Increase Visibility:** More applications = more opportunities
+- **Track Progress:** Monitor application history
+- **Focus on Quality:** Spend time on interview prep instead of manual applications
 
 ---
 
-**Happy Refreshing! 🎉**
+**Happy Job Hunting! 🎯**
+
+Remember: Automation is a tool to help you apply more efficiently, but the quality of your profile, resume, and interview skills ultimately determine your success. Use this time saved to improve your technical skills and prepare for interviews!
